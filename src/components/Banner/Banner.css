@@ -1,4 +1,54 @@
 .banner {
     background-image: url('../../../public/images/aluraflix-banner.png');
     height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 3%;
+    color: #fff;
+}
+
+.banner__container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info__banner {
+    width: 600px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.title__category {
+    margin: 0;
+    background-color:#6BD1FF;
+    width: 300px;
+    font-size: 60px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 4px;
+}
+
+.title__banner {
+    margin: 0;
+    font-size: 46px;
+    font-weight: 400;
+    margin-top: 40px;
+}
+
+.paragraph__banner {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.video iframe{
+    width: 600px;
+    height: 300px;
 }
