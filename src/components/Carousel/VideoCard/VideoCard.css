@@ -1,0 +1,6 @@
+.videocard__image {
+    width: 400px;
+    height: 210px;
+    border: 4px solid #6BD1FF;
+    border-radius: 4px;
+}

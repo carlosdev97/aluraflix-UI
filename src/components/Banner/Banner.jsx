@@ -1,4 +1,5 @@
 import './Banner.css';
+import VideoCard from '../Carousel/VideoCard/VideoCard';
 
 function Banner() {
     return (
@@ -9,6 +10,7 @@ function Banner() {
                     <h3 className='title__banner'>Challenge React</h3>
                     <p className='paragraph__banner'>Este challenge es una forma de aprendizaje. Es un mecanismo donde podrás comprometerte en la resolución de un problema para poder aplicar todos los conocimientos adquiridos en la formación React.</p>
                 </div>
+                <VideoCard embedId='ov7vA5HFe6w'/>
             </div>
         </section>
     )
