@@ -1,10 +1,10 @@
 import './Carousel.css';
 import SliderVideos from '../Slider/Slider';
 
-function Carousel() {
+function Carousel({ videos }) {
     return (
         <section className='carousel'>
-            <SliderVideos></SliderVideos>
+            <SliderVideos videos={ videos }/>
         </section>
     )
 }

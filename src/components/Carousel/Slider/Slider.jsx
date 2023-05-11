@@ -5,17 +5,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import VideoCard from "../VideoCard/VideoCard";
-import { search } from "../../../api/api";
 
-function SliderVideos() {
 
-    const url = '/videos';
-
-    const [videos, setVideos] = useState([])
-
-    useEffect(() => {
-        search(url, setVideos)
-    }, [url])
+function SliderVideos({ videos }) {
 
     const settings = {
         dots: true,
@@ -31,7 +23,8 @@ function SliderVideos() {
             <Slider {...settings} className="slider">
                 {
                     videos.map(video => {
-                        return <VideoCard urlVideo={ urlVideo } urlImage={ urlImage }/>
+                        const { videoUrl, imageUrl } = video;
+                        return <VideoCard videoUrl={ videoUrl } imageUrl={ imageUrl }/>
                     })
                 }
             </Slider>
