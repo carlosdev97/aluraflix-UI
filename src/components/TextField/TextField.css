@@ -1,0 +1,18 @@
+.input__form {
+    width: 100%;
+    background-color: #53585D;
+    border-radius: 4px;
+    padding: 15px 10px;
+    outline: none;
+    color: #c2c2c2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.input__form::placeholder {
+    color: #c2c2c2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
