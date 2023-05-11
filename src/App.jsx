@@ -12,12 +12,16 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
 
-  const url = '/videos';
+  const url = '/';
+  const urlVideos = '/videos';
+  const urlCategories = '/categorias';
   const [videos, setVideos] = useState([]);
+  const [categories, setCategories] = useState([]);
 
 
   useEffect(() => {
-    search(url, setVideos)
+    search(urlVideos, setVideos)
+    search(urlCategories, setCategories)
   }, [url])
 
 
@@ -26,7 +30,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<React.Fragment> <Banner /> <Carousel videos={ videos } /> </React.Fragment>} />
-        <Route path='/addvideo' element={ <AddVideo /> } />
+        <Route path='/addvideo' element={ <AddVideo categories={ categories.map((categorie) => categorie.nombre) } /> } />
       </Routes>
       <Footer />
     </Router>

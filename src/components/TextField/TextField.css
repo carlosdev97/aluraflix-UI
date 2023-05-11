@@ -8,6 +8,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 300;
+    box-sizing: border-box;
 }
 
 .input__form::placeholder {
