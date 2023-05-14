@@ -1,76 +1,84 @@
 {
-    "categorias": [
-        {
-            "id": "backend",
-            "nombre": "Back End",
-            "descripcion": "Videos sobre el curso de Back End que estoy llevando a cabo."
-        },
-        {
-            "id": "mobile",
-            "nombre": "Mobile",
-            "descripcion": "Videos sobre el curso de Mobile que estoy llevando a cabo."
-        },
-        {
-            "id": "infraestructura",
-            "nombre": "Infraestructura",
-            "descripcion": "Videos sobre el curso de Infraestructura que estoy llevando a cabo."
-        },
-        {
-            "id": "datascience",
-            "nombre": "Data Science",
-            "descripcion": "Videos sobre el curso de Data Science que estoy llevando a cabo."
-        },
-        {
-            "id": "desingux",
-            "nombre": "Desing & UX",
-            "descripcion": "Videos sobre el curso de Desing & UX que estoy llevando a cabo."
-        },
-        {
-            "id": "marketingdigital",
-            "nombre": "Marketing Digital",
-            "descripcion": "Videos sobre el curso de Marketing Digital que estoy llevando a cabo."
-        },
-        {
-            "id": "innovaciongestion",
-            "nombre": "Innovacion y gestión",
-            "descripcion": "Videos sobre el curso de Innovacion y gestión que estoy llevando a cabo."
-        }
-    ],
-    "videos": [
-        {
-            "titulo": "¿Qué significa pensar como programador?",
-            "videoUrl": "https://www.youtube.com/watch?v=ov7vA5HFe6w&t=6s",
-            "imageUrl": "https://img.youtube.com/vi/ov7vA5HFe6w/maxresdefault.jpg",
-            "categoria": "frontend",
-            "descripcion": "Video del area de Front End"
-        },
-        {
-            "titulo": "¿Cuando usar let, var y const?",
-            "videoUrl": "https://www.youtube.com/watch?v=PztCEdIJITY",
-            "imageUrl": "https://img.youtube.com/vi/PztCEdIJITY/maxresdefault.jpg",
-            "categoria": "frontend",
-            "descripcion": "Video del area de Front End"
-        },
-        {
-            "titulo": "¿Qué es JavaScript?",
-            "videoUrl": "https://www.youtube.com/watch?v=GJfOSoaXk4s",
-            "imageUrl": "https://img.youtube.com/vi/GJfOSoaXk4s/maxresdefault.jpg",
-            "categoria": "frontend",
-            "descripcion": "Video del area de Front End"
-        },
-        {
-            "titulo": "Equipo Front End",
-            "videoUrl": "https://www.youtube.com/watch?v=rpvrLaBQwgg",
-            "imageUrl": "https://img.youtube.com/vi/rpvrLaBQwgg/maxresdefault.jpg",
-            "categoria": "frontend",
-            "descripcion": "Video del area de Front End"
-        },
-        {
-            "titulo": "¿Cómo un desarrollador Front End utiliza el Figma?",
-            "videoUrl": "https://www.youtube.com/watch?v=UuAX5azcvDQ",
-            "imageUrl": "https://img.youtube.com/vi/UuAX5azcvDQ/maxresdefault.jpg",
-            "categoria": "frontend",
-            "descripcion": "Video del area de Front End"
-        }
-    ]
+  "categorias": [
+    {
+      "id": "backend",
+      "nombre": "Back End",
+      "descripcion": "Videos sobre el curso de Back End que estoy llevando a cabo."
+    },
+    {
+      "id": "mobile",
+      "nombre": "Mobile",
+      "descripcion": "Videos sobre el curso de Mobile que estoy llevando a cabo."
+    },
+    {
+      "id": "infraestructura",
+      "nombre": "Infraestructura",
+      "descripcion": "Videos sobre el curso de Infraestructura que estoy llevando a cabo."
+    },
+    {
+      "id": "datascience",
+      "nombre": "Data Science",
+      "descripcion": "Videos sobre el curso de Data Science que estoy llevando a cabo."
+    },
+    {
+      "id": "desingux",
+      "nombre": "Desing & UX",
+      "descripcion": "Videos sobre el curso de Desing & UX que estoy llevando a cabo."
+    },
+    {
+      "id": "marketingdigital",
+      "nombre": "Marketing Digital",
+      "descripcion": "Videos sobre el curso de Marketing Digital que estoy llevando a cabo."
+    },
+    {
+      "id": "innovaciongestion",
+      "nombre": "Innovacion y gestión",
+      "descripcion": "Videos sobre el curso de Innovacion y gestión que estoy llevando a cabo."
+    }
+  ],
+  "videos": [
+    {
+      "titulo": "¿Qué significa pensar como programador?",
+      "videoUrl": "https://www.youtube.com/watch?v=ov7vA5HFe6w&t=6s",
+      "imageUrl": "https://img.youtube.com/vi/ov7vA5HFe6w/maxresdefault.jpg",
+      "categoria": "frontend",
+      "descripcion": "Video del area de Front End"
+    },
+    {
+      "titulo": "¿Cuando usar let, var y const?",
+      "videoUrl": "https://www.youtube.com/watch?v=PztCEdIJITY",
+      "imageUrl": "https://img.youtube.com/vi/PztCEdIJITY/maxresdefault.jpg",
+      "categoria": "frontend",
+      "descripcion": "Video del area de Front End"
+    },
+    {
+      "titulo": "¿Qué es JavaScript?",
+      "videoUrl": "https://www.youtube.com/watch?v=GJfOSoaXk4s",
+      "imageUrl": "https://img.youtube.com/vi/GJfOSoaXk4s/maxresdefault.jpg",
+      "categoria": "frontend",
+      "descripcion": "Video del area de Front End"
+    },
+    {
+      "titulo": "Equipo Front End",
+      "videoUrl": "https://www.youtube.com/watch?v=rpvrLaBQwgg",
+      "imageUrl": "https://img.youtube.com/vi/rpvrLaBQwgg/maxresdefault.jpg",
+      "categoria": "frontend",
+      "descripcion": "Video del area de Front End"
+    },
+    {
+      "titulo": "¿Cómo un desarrollador Front End utiliza el Figma?",
+      "videoUrl": "https://www.youtube.com/watch?v=UuAX5azcvDQ",
+      "imageUrl": "https://img.youtube.com/vi/UuAX5azcvDQ/maxresdefault.jpg",
+      "categoria": "frontend",
+      "descripcion": "Video del area de Front End"
+    },
+    {
+      "id": "2ff93165-fdc7-42fd-ad08-a66d545bd229",
+      "title": "Box Model y Box sizing",
+      "videoUrl": "https://www.youtube.com/watch?v=ts9qfCKamKg",
+      "imageUrl": "https://img.youtube.com/vi/ts9qfCKamKg/maxresdefault.jpg",
+      "categorie": "Desing & UX",
+      "description": "Video del área de Front End."
+    }
+  ]
 }
