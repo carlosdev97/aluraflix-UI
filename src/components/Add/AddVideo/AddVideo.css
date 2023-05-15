@@ -1,5 +1,4 @@
 .addvideo {
-    background-color: #191919;
     height: auto;
     padding: 50px 3%;
     font-family: 'Roboto', sans-serif;
@@ -9,25 +8,20 @@
 .form {
     display: flex;
     flex-direction: column;
-    gap: 70px;
+    gap: 50px;
 }
 
 .form__title {
     margin: 0;
-    color: #f5f5f5;
     font-weight: 400;
     font-size: 2rem;
 }
 
-.form textarea {
-    resize: none;
-}
-
 .buttons__container {
     display: flex;
-    gap: 40px;
+    gap: 10px;
 }
 
-.buttons__container .button:last-child {
+.buttons__container Button:last-child {
     margin-left: auto;
 }
