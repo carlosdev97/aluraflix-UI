@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Banner from './components/Banner/Banner';
 import Carousel from './components/Carousel/Carousel/Carousel';
 import AddVideo from './components/Add/AddVideo/AddVideo';
+import EditVideo from './components/Edit/EditVideo/EditVideo';
 import Footer from './components/Footer/Footer';
 import { search } from './api/api';
 
@@ -31,6 +32,7 @@ function App() {
       <Routes>
         <Route path='/' element={<React.Fragment> <Banner /> <Carousel videos={ videos } /> </React.Fragment>} />
         <Route path='/addvideo' element={ <AddVideo categories={ categories.map((categorie) => categorie.nombre) } /> } />
+        <Route path='/editvideo' element={ <EditVideo videos={ videos }/> } />
       </Routes>
       <Footer />
     </Router>

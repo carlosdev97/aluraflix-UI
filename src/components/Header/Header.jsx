@@ -11,7 +11,7 @@ function Header() {
     const [addButton, setAddButton] = useState(true);
 
     useEffect(() => {
-        if (pathname == '/addvideo') {
+        if (pathname == '/addvideo' || pathname == '/editvideo') {
             setAddButton(false);
         } else {
             setAddButton(true);
@@ -21,7 +21,7 @@ function Header() {
     return (
         <header className='header'>
             <div className='header__container'>
-                <img className='header__logo' src={logoAluraflix} alt='Logo de Aluraflix' />
+                <Link to='/'><img className='header__logo' src={logoAluraflix} alt='Logo de Aluraflix' /></Link>
                 { addButton ? <Link className='header__link' to='/addvideo'>Nuevo video</Link> : <></> }
             </div>
         </header>

@@ -2,7 +2,6 @@
     height: auto;
     padding: 50px 3%;
     font-family: 'Roboto', sans-serif;
-    text-align: center;
 }
 
 .form {
@@ -24,4 +23,9 @@
 
 .buttons__container Button:last-child {
     margin-left: auto;
+}
+
+.addvideo__link {
+    text-decoration: none;
+    color: inherit;
 }

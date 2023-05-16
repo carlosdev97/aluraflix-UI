@@ -19,12 +19,11 @@ function SliderVideos({ videos }) {
 
     return (
         <div className="slider__container">
-            <h2>Single Item</h2>
             <Slider {...settings} className="slider">
                 {
-                    videos.map(video => {
+                    videos.map((video, index) => {
                         const { videoUrl, imageUrl } = video;
-                        return <VideoCard videoUrl={ videoUrl } imageUrl={ imageUrl }/>
+                        return <VideoCard key={index} videoUrl={ videoUrl } imageUrl={ imageUrl }/>
                     })
                 }
             </Slider>
