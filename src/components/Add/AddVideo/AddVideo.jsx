@@ -64,11 +64,11 @@ function AddVideo({ categories }) {
           if (isValid) {
             const data = {
               id: uuidv4(),
-              title, 
-              videoUrl, 
-              imageUrl, 
-              categorie, 
-              description};
+              titulo: title, 
+              videoUrl: videoUrl, 
+              imageUrl: imageUrl, 
+              categoria: categorie, 
+              description: description};
             setLoading(true);
             await create('/videos', data)
             setLoading(false)
@@ -184,7 +184,7 @@ function AddVideo({ categories }) {
       >
         {
             categories.map((categorie, index) => {
-              return <MenuItem key={index} value={categorie}>{categorie}</MenuItem>
+              return <MenuItem key={index} value={categorie.nombre}>{categorie.nombre}</MenuItem>
             })
           }
       </TextField>

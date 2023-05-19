@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import VideoCard from "../VideoCard/VideoCard";
 
 
-function SliderVideos({ videos }) {
+function SliderVideos({ categorie, videos }) {
 
     const settings = {
         dots: true,
@@ -16,17 +16,23 @@ function SliderVideos({ videos }) {
         slidesToShow: 3,
         slidesToScroll: 1
     };
-
+    
     return (
         <div className="slider__container">
-            <Slider {...settings} className="slider">
-                {
-                    videos.map((video, index) => {
-                        const { videoUrl, imageUrl } = video;
-                        return <VideoCard key={index} videoUrl={ videoUrl } imageUrl={ imageUrl }/>
-                    })
-                }
-            </Slider>
+            {
+                videos.length > 0 && 
+                    <>
+                        <h2>{categorie.nombre}</h2>
+                        <Slider {...settings} className="slider">
+                        {
+                            videos.map((video) => {
+                            const { videoUrl, imageUrl } = video;
+                            return <VideoCard videoUrl={ videoUrl } imageUrl={ imageUrl }/>
+                            })
+                        }
+                        </Slider>
+                    </>
+            }
         </div>
     )
 }

@@ -30,8 +30,8 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path='/' element={<React.Fragment> <Banner /> <Carousel videos={ videos } /> </React.Fragment>} />
-        <Route path='/addvideo' element={ <AddVideo categories={ categories.map((categorie) => categorie.nombre) } /> } />
+        <Route path='/' element={<React.Fragment> <Banner /> <Carousel categories={ categories }videos={ videos }/> </React.Fragment>} />
+        <Route path='/addvideo' element={ <AddVideo categories={ categories } /> } />
         <Route path='/editvideo' element={ <EditVideo videos={ videos }/> } />
       </Routes>
       <Footer />

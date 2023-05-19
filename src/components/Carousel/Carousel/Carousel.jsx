@@ -1,10 +1,15 @@
 import './Carousel.css';
 import SliderVideos from '../Slider/Slider';
 
-function Carousel({ videos }) {
+function Carousel({ categories, videos }) {
+    
     return (
         <section className='carousel'>
-            <SliderVideos videos={ videos }/>
+            {
+                categories.map((categorie, index) => {
+                    return <SliderVideos key={index} videos={videos.filter((video) => video.categoria === categorie.nombre)} categorie={categorie}/>
+                })
+            }
         </section>
     )
 }
