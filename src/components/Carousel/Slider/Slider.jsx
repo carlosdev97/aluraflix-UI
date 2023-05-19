@@ -9,31 +9,43 @@ import VideoCard from "../VideoCard/VideoCard";
 
 function SliderVideos({ categorie, videos }) {
 
+    function validateVideos(){
+        if (videos.length >= 3){
+            return 3;
+        } else if (videos.length == 2){
+            return 2;
+        } else {
+            return 1;
+        }
+    }
+
     const settings = {
-        dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: validateVideos(),
         slidesToScroll: 1
     };
     
     return (
-        <div className="slider__container">
+        <>
             {
                 videos.length > 0 && 
-                    <>
-                        <h2>{categorie.nombre}</h2>
-                        <Slider {...settings} className="slider">
+                <div className="slider__container">
+                    <div className="slider__info">
+                        <h2 className="slider__title" style={{backgroundColor: categorie.color}}>{categorie.nombre}</h2>
+                        <div className="slider__description">{categorie.descripcion}</div>
+                    </div>
+                    <Slider {...settings} className="slider">
                         {
                             videos.map((video) => {
                             const { videoUrl, imageUrl } = video;
-                            return <VideoCard videoUrl={ videoUrl } imageUrl={ imageUrl }/>
+                            return <VideoCard videoUrl={ videoUrl } imageUrl={ imageUrl } color={categorie.color} />
                             })
                         }
-                        </Slider>
-                    </>
+                    </Slider>
+                </div>
             }
-        </div>
+        </>
     )
 }
 

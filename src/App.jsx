@@ -4,8 +4,8 @@ import Header from './components/Header/Header';
 import Banner from './components/Banner/Banner';
 import Carousel from './components/Carousel/Carousel/Carousel';
 import AddVideo from './components/Add/AddVideo/AddVideo';
-import EditVideo from './components/Edit/EditVideo/EditVideo';
 import Footer from './components/Footer/Footer';
+import LinearProgress from '@mui/material/LinearProgress';
 import { search } from './api/api';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -18,21 +18,30 @@ function App() {
   const urlCategories = '/categorias';
   const [videos, setVideos] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(false);
 
 
   useEffect(() => {
-    search(urlVideos, setVideos)
-    search(urlCategories, setCategories)
-  }, [url])
+    async function fetchData() {
+      try {
+        setLoading(true);
+        await search(urlVideos, setVideos);
+        await search(urlCategories, setCategories);
+        setLoading(false);
+      } catch (error) {
+      }
+    }
+  
+    fetchData();
+  }, [url]);
 
 
   return (
     <Router>
       <Header />
       <Routes>
-        <Route path='/' element={<React.Fragment> <Banner /> <Carousel categories={ categories }videos={ videos }/> </React.Fragment>} />
+        <Route path='/' element={<React.Fragment> <Banner /> { loading ? <LinearProgress /> : <Carousel categories={ categories }videos={ videos }/>}</React.Fragment>} />
         <Route path='/addvideo' element={ <AddVideo categories={ categories } /> } />
-        <Route path='/editvideo' element={ <EditVideo videos={ videos }/> } />
       </Routes>
       <Footer />
     </Router>

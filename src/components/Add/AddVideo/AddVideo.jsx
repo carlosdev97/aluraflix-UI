@@ -3,6 +3,7 @@ import { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
+import Alert from '@mui/material/Alert';
 import { create } from "../../../api/api";
 import { v4 as uuidv4 } from 'uuid';
 import { LoaderForm } from "../../Loader/LoaderForm";
@@ -224,9 +225,8 @@ function AddVideo({ categories }) {
       <div className="buttons__container">
         <Button variant="contained" type="submit">Guardar</Button>
         <Button variant="outlined" onClick={clearInputs}>Limpiar</Button>
-        <Button variant="contained"><Link className="addvideo__link" to='/editvideo'>Editar videos</Link></Button>
         {loading ? <LoaderForm /> : <></>}
-        {confirmation ? <Confirmation /> : <></>}
+        {confirmation ? <Alert severity="success" variant="outlined">¡Datos enviados con exito!</Alert> : <></>}
         <Button variant="contained">Nueva categoria</Button>
       </div>
     </form>
