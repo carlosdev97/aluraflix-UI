@@ -7,7 +7,6 @@ import Alert from '@mui/material/Alert';
 import { create } from "../../../api/api";
 import { v4 as uuidv4 } from 'uuid';
 import { LoaderForm } from "../../Loader/LoaderForm";
-import { Confirmation } from "../../Confirmation/Confirmation";
 import { Link } from 'react-router-dom';
 
 function AddVideo({ categories }) {
@@ -227,7 +226,7 @@ function AddVideo({ categories }) {
         <Button variant="outlined" onClick={clearInputs}>Limpiar</Button>
         {loading ? <LoaderForm /> : <></>}
         {confirmation ? <Alert severity="success" variant="outlined">¡Datos enviados con exito!</Alert> : <></>}
-        <Button variant="contained">Nueva categoria</Button>
+        <Button variant="contained" component={Link} to="/addcategory">Nueva categoria</Button>
       </div>
     </form>
   </section>

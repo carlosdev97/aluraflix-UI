@@ -11,7 +11,7 @@ function Header() {
     const [addButton, setAddButton] = useState(true);
 
     useEffect(() => {
-        if (pathname == '/addvideo' || pathname == '/editvideo') {
+        if (pathname != "/") {
             setAddButton(false);
         } else {
             setAddButton(true);

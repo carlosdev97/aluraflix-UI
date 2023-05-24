@@ -1,0 +1,10 @@
+.addcategory {
+    height: auto;
+    padding: 50px 3%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.buttons__container--category {
+    display: flex;
+    gap: 10px;
+}

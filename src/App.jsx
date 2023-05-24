@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Banner from './components/Banner/Banner';
 import Carousel from './components/Carousel/Carousel/Carousel';
 import AddVideo from './components/Add/AddVideo/AddVideo';
+import AddCategory from './components/Add/AddCategory/AddCategory';
 import Footer from './components/Footer/Footer';
 import LinearProgress from '@mui/material/LinearProgress';
 import { search } from './api/api';
@@ -42,6 +43,7 @@ function App() {
       <Routes>
         <Route path='/' element={<React.Fragment> <Banner /> { loading ? <LinearProgress /> : <Carousel categories={ categories }videos={ videos }/>}</React.Fragment>} />
         <Route path='/addvideo' element={ <AddVideo categories={ categories } /> } />
+        <Route path='/addcategory' element={ <AddCategory /> } />
       </Routes>
       <Footer />
     </Router>
