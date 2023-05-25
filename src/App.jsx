@@ -43,7 +43,7 @@ function App() {
       <Routes>
         <Route path='/' element={<React.Fragment> <Banner /> { loading ? <LinearProgress /> : <Carousel categories={ categories }videos={ videos }/>}</React.Fragment>} />
         <Route path='/addvideo' element={ <AddVideo categories={ categories } /> } />
-        <Route path='/addcategory' element={ <AddCategory /> } />
+        <Route path='/addcategory' element={ <AddCategory categories={ categories } /> } />
       </Routes>
       <Footer />
     </Router>
