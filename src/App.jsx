@@ -36,6 +36,10 @@ function App() {
     fetchData();
   }, [url]);
 
+  function updateData() {
+    search(urlVideos, setVideos);
+    search(urlCategories, setCategories);
+  }
 
   return (
     <Router>
@@ -43,7 +47,7 @@ function App() {
       <Routes>
         <Route path='/' element={<React.Fragment> <Banner /> { loading ? <LinearProgress /> : <Carousel categories={ categories }videos={ videos }/>}</React.Fragment>} />
         <Route path='/addvideo' element={ <AddVideo categories={ categories } /> } />
-        <Route path='/addcategory' element={ <AddCategory categories={ categories } /> } />
+        <Route path='/addcategory' element={ <AddCategory categories={ categories } updateData={updateData}/> } />
       </Routes>
       <Footer />
     </Router>
