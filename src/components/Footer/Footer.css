@@ -1,7 +1,24 @@
 .footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
     padding: 20px 3% 60px 3%;
     background-color: #191919;
     border-top: 2px solid #2A7AE4;
+}
+
+.copyright__text {
+    color: #C2C2C2;
+}
+
+.copyright__link {
+    color: #2A7AE4;
+}
+
+@media screen and (max-width: 425px) {
+    .footer {
+        padding: 20px 3%;
+    }
 }

@@ -27,3 +27,24 @@
     font-weight: 300;
     font-size: 18px;
 }
+
+@media screen and (max-width: 425px) {
+    .slider__container {
+        gap: 5px;
+    }
+
+    .slider__info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .slider__title {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .slider__description {
+        font-size: 12px;
+    }
+}
