@@ -48,7 +48,12 @@
     font-weight: 300;
 }
 
-.video iframe{
-    width: 600px;
-    height: 300px;
+@media screen and (max-width: 425px) {
+    .title__banner {
+        font-size: 27px;
+    }
+
+    .paragraph__banner {
+        font-size: 16px;
+    }
 }
