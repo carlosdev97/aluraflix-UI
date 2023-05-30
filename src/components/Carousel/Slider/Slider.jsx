@@ -24,7 +24,6 @@ function SliderVideos({ categorie, videos }) {
         speed: 500,
         slidesToShow: validateVideos(),
         slidesToScroll: 1,
-        arrows: false,
         responsive: [
             {
                 breakpoint: 1024,
@@ -46,7 +45,8 @@ function SliderVideos({ categorie, videos }) {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    arrows: false
                 }
             }
         ]

@@ -1,5 +1,5 @@
 import "./AddCategory.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -20,6 +20,22 @@ function AddCategory({ categories, updateData }) {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [color, setColor] = useState("");
+
+  const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+      setHeight(window.innerHeight);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const [loading, setLoading] = useState(false);
   const [confirmation, setConfirmation] = useState(false);
@@ -58,7 +74,7 @@ function AddCategory({ categories, updateData }) {
     <section className="addcategory">
       <form
         className="form"
-        onSubmit={ async (event) => {
+        onSubmit={async (event) => {
           event.preventDefault();
 
           let isValid = true;
@@ -86,7 +102,7 @@ function AddCategory({ categories, updateData }) {
             }, 5000);
             updateData();
           } else {
-            
+
           }
         }}
       >
@@ -157,12 +173,11 @@ function AddCategory({ categories, updateData }) {
           label="Color"
           type="color"
           variant="standard"
-          focused
           onChange={(event) => {
             setColor(event.target.value);
           }}
           value={color}
-          onBlur={(event) =>{
+          onBlur={(event) => {
             if (event.target.value === "#000000") {
               setErrors({
                 ...errors,
@@ -193,44 +208,41 @@ function AddCategory({ categories, updateData }) {
       </form>
 
       <TableContainer component={Paper} sx={{ margin: "40px 0px" }}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table sx={ window.innerWidth <= 425 ? { width: "100%" } : { minWidth: 650 } } aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell aling="center">Nombre</TableCell>
-              <TableCell align="center">Descripción</TableCell>
-              <TableCell align="center">Editar</TableCell>
-              <TableCell align="center">Remover</TableCell>
+              <TableCell align={ window.innerWidth <= 425 ? "left" : "center" }>Nombre</TableCell>
+              { window.innerWidth <= 425 
+                ? ( <TableCell align="center">Acciones</TableCell> ) 
+                : (<> <TableCell align="center">Descripción</TableCell> 
+                    <TableCell align="center">Editar</TableCell>
+                    <TableCell align="center">Eliminar</TableCell>
+                  </>
+                  ) 
+              }
             </TableRow>
           </TableHead>
           <TableBody>
-            {categories.map((categorie) => (
+            { categories.map( (categorie) => (
               <TableRow
                 key={categorie.nombre}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
-                <TableCell component="th" scope="row">
-                  {categorie.nombre}
-                </TableCell>
-                <TableCell align="center">{categorie.descripcion}</TableCell>
-                <TableCell align="center">
-                  <Button
-                    color="success"
-                    variant="outlined"
-                    startIcon={<EditIcon />}
-                  >
-                    Editar
-                  </Button>
-                </TableCell>
-                <TableCell align="center">
-                  <Button
-                    color="error"
-                    variant="outlined"
-                    startIcon={<DeleteIcon />}
-                    onClick={() => deleteCategory(categorie.id)}
-                  >
-                    Eliminar
-                  </Button>
-                </TableCell>
+                <TableCell component="th" scope="row">{categorie.nombre}</TableCell>
+                { window.innerWidth <= 425 
+                  ? ( <TableCell align="center" sx={{ display: "flex", justifyContent: "space-between"}} >
+                        <EditIcon align="center" color="success" />
+                        <DeleteIcon align="center" color="error" onClick={() => deleteCategory(categorie.id)} disabled/>
+                      </TableCell> ) 
+                  : ( <> <TableCell align="center">{categorie.descripcion}</TableCell> 
+                        <TableCell align="center">
+                          <Button color="success" variant="outlined" startIcon={<EditIcon />}>Editar</Button>
+                        </TableCell>
+                        <TableCell align="center">
+                          <Button color="error" variant="outlined" startIcon={<DeleteIcon />} onClick={() => deleteCategory(categorie.id)} disabled>Eliminar</Button>
+                        </TableCell> </> 
+                    )
+                }
               </TableRow>
             ))}
           </TableBody>

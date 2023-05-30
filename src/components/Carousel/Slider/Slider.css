@@ -30,13 +30,13 @@
 
 @media screen and (max-width: 425px) {
     .slider__container {
-        gap: 5px;
+        gap: 20px;
     }
 
     .slider__info {
         flex-direction: column;
         align-items: flex-start;
-        gap: 5px;
+        gap: 20px;
     }
 
     .slider__title {
@@ -45,6 +45,6 @@
     }
 
     .slider__description {
-        font-size: 12px;
+        font-size: 16px;
     }
 }
