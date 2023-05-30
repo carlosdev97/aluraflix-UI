@@ -232,7 +232,7 @@ function AddCategory({ categories, updateData }) {
                 { window.innerWidth <= 425 
                   ? ( <TableCell align="center" sx={{ display: "flex", justifyContent: "space-between"}} >
                         <EditIcon align="center" color="success" />
-                        <DeleteIcon align="center" color="error" onClick={() => deleteCategory(categorie.id)} disabled/>
+                        <DeleteIcon align="center" color="error" />
                       </TableCell> ) 
                   : ( <> <TableCell align="center">{categorie.descripcion}</TableCell> 
                         <TableCell align="center">
